@@ -46,7 +46,7 @@ def invite_doters(message):
     DOTERS.remove(message.from_user.username)
     if len(DOTERS) == 2:
         file = open(f'audio/{random.choice(AUDIO_DOTA)}', 'rb')
-        bot.send_voice(message.chat.id, file, caption=f'Го в доту @{DOTERS[0]} @{DOTERS[1]}')
+        bot.send_audio(message.chat.id, file, caption=f'Го в доту @{DOTERS[0]} @{DOTERS[1]}')
     else:
         bot.send_message(message.chat.id, f'Го в доту @{DOTERS[0]} @{DOTERS[1]} @{DOTERS[2]}')
     DOTERS.append(message.from_user.username)
@@ -54,7 +54,7 @@ def invite_doters(message):
 @bot.message_handler(commands=['phrase'])
 def random_phrase(message):
     file = open(f'audio/{random.choice(AUDIO_DOTA)}', 'rb')
-    bot.send_voice(message.chat.id, file)
+    bot.send_audio(message.chat.id, file)
     
 
 bot.infinity_polling()
