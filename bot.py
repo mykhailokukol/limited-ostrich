@@ -12,7 +12,7 @@ load_dotenv(find_dotenv())
 
 bot = telebot.TeleBot(os.getenv('TG_TOKEN'), parse_mode=None)
 
-DOTERS = ['alex_yavor', 'olegya76', 'bushiqe']
+DOTERS = ['alex_yavor', 'olegya76', 'bushiqe', 'Scythe_1998']
 AUDIO_DOTA = [
     'Tusk_start.mpeg',
     'Pudge_good_idea.mpeg',
